@@ -500,6 +500,15 @@
       border-color: #7a5c1e;
       color: white;
     }
+    .filter-btn.uc-only {
+      border-color: rgba(0,50,98,0.4);
+      color: #003262;
+    }
+    .filter-btn.uc-only:hover, .filter-btn.uc-only.active {
+      background: #003262;
+      border-color: #003262;
+      color: white;
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -533,12 +542,12 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">Est. 1636 &ndash; 1912 &middot; 20 Institutions</div>
+  <div class="hero-eyebrow">Est. 1636 &ndash; 2005 &middot; 30 Institutions</div>
   <h1>America's Most <em>Prestigious</em> Universities</h1>
-  <p class="hero-desc">From the Ivy League's eight founding members to MIT, Stanford, Duke, and beyond — twenty institutions that have shaped science, law, business, and culture across the globe.</p>
+  <p class="hero-desc">From the Ivy League's eight founding members to MIT, Stanford, Duke, and all ten UC campuses — thirty institutions that have shaped science, law, business, and culture across the globe.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><span class="num">20</span><span class="label">Universities</span></div>
-    <div class="hero-stat"><span class="num">900+</span><span class="label">Nobel Laureates</span></div>
+    <div class="hero-stat"><span class="num">30</span><span class="label">Universities</span></div>
+    <div class="hero-stat"><span class="num">1,000+</span><span class="label">Nobel Laureates</span></div>
     <div class="hero-stat"><span class="num">30+</span><span class="label">U.S. Presidents</span></div>
     <div class="hero-stat"><span class="num">1636</span><span class="label">Oldest Founded</span></div>
   </div>
@@ -570,7 +579,7 @@
     <div class="section-header">
       <div class="section-label">The Schools</div>
       <h2 class="section-title">Twenty Elite Universities</h2>
-      <p class="section-desc">Eight Ivy League members and twelve more of America's most celebrated institutions — each with a distinct identity, history, and legacy.</p>
+      <p class="section-desc">Eight Ivy League members, twelve more elite private institutions, and all ten UC campuses — each with a distinct identity, history, and legacy.</p>
     </div>
 
     <div class="filter-bar">
@@ -583,6 +592,7 @@
       <button class="filter-btn" onclick="filterCards('midwest', this)">Midwest</button>
       <button class="filter-btn" onclick="filterCards('south', this)">South</button>
       <button class="filter-btn" onclick="filterCards('west', this)">West Coast</button>
+      <button class="filter-btn uc-only" onclick="filterCards('uc', this)">UC System</button>
     </div>
 
     <div class="uni-grid" id="uniGrid"></div>
@@ -1092,6 +1102,178 @@
       acceptance: "11.3%",
       acceptanceRaw: 11.3,
     },
+
+    /* ── UC SYSTEM ── */
+    {
+      name: "UC Berkeley",
+      founded: 1868,
+      location: "Berkeley, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "The flagship of the UC system and the top-ranked public university in the world. Berkeley has produced more Nobel laureates than most nations, and its influence spans law, engineering, public policy, and social movements that reshaped America.",
+      color: "#003262",
+      colorName: "Berkeley Blue",
+      tags: ["Engineering", "Law", "Public Policy"],
+      img: "https://images.unsplash.com/photo-1588776814546-1ffbb172d4ef?w=600&q=80",
+      undergrads: "32,000",
+      endowment: "$6.3B",
+      acceptance: "11.4%",
+      acceptanceRaw: 11.4,
+    },
+    {
+      name: "UCLA",
+      founded: 1919,
+      location: "Los Angeles, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "One of the most applied-to universities on earth, UCLA blends world-class research with the culture of Los Angeles. It leads the nation in undergraduate applications and boasts top programs in film, medicine, engineering, and management.",
+      color: "#2774AE",
+      colorName: "UCLA Blue",
+      tags: ["Film & TV", "Medicine", "Engineering"],
+      img: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
+      undergrads: "32,000",
+      endowment: "$7.1B",
+      acceptance: "9.0%",
+      acceptanceRaw: 9.0,
+    },
+    {
+      name: "UC San Diego",
+      founded: 1960,
+      location: "La Jolla, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "Built on the cliffs above the Pacific Ocean, UCSD is a powerhouse in the natural sciences, medicine, and engineering. Its Scripps Institution of Oceanography and School of Medicine rank among the best in the world.",
+      color: "#00629B",
+      colorName: "UCSD Blue",
+      tags: ["Oceanography", "Medicine", "Engineering"],
+      img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+      undergrads: "33,000",
+      endowment: "$3.4B",
+      acceptance: "24.7%",
+      acceptanceRaw: 24.7,
+    },
+    {
+      name: "UC Davis",
+      founded: 1908,
+      location: "Davis, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "The world leader in agricultural and veterinary sciences, UC Davis is also a major research university with top programs in ecology, food science, and engineering. Its School of Veterinary Medicine has ranked #1 globally for decades.",
+      color: "#022851",
+      colorName: "Aggie Blue",
+      tags: ["Agriculture", "Veterinary", "Ecology"],
+      img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80",
+      undergrads: "31,000",
+      endowment: "$2.1B",
+      acceptance: "39.1%",
+      acceptanceRaw: 39.1,
+    },
+    {
+      name: "UC Santa Barbara",
+      founded: 1909,
+      location: "Santa Barbara, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "Set on a peninsula jutting into the Pacific, UCSB punches far above its size in research. It has produced 6 Nobel laureates since 2004 alone, with particular strength in physics, chemistry, and marine science.",
+      color: "#003660",
+      colorName: "UCSB Blue",
+      tags: ["Physics", "Marine Science", "Chemistry"],
+      img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80",
+      undergrads: "23,000",
+      endowment: "$1.3B",
+      acceptance: "26.8%",
+      acceptanceRaw: 26.8,
+    },
+    {
+      name: "UC Irvine",
+      founded: 1965,
+      location: "Irvine, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "One of the youngest members of the AAU, UC Irvine has built a strong reputation in computer science, criminology, and the health sciences. It is one of the most diverse universities in the country and a leading driver of innovation in Orange County.",
+      color: "#0064A4",
+      colorName: "Anteater Blue",
+      tags: ["Computer Science", "Health Sciences", "Business"],
+      img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+      undergrads: "29,000",
+      endowment: "$0.9B",
+      acceptance: "21.9%",
+      acceptanceRaw: 21.9,
+    },
+    {
+      name: "UC Santa Cruz",
+      founded: 1965,
+      location: "Santa Cruz, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "Perched in the redwood forests above Monterey Bay, UC Santa Cruz is known for its distinctive college system, its pioneering role in agroecology and genomics, and the birthplace of the modern video game industry through its renowned games and digital media programs.",
+      color: "#003C6C",
+      colorName: "UCSC Blue",
+      tags: ["Genomics", "Environmental", "Game Design"],
+      img: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80",
+      undergrads: "17,000",
+      endowment: "$0.5B",
+      acceptance: "47.5%",
+      acceptanceRaw: 47.5,
+    },
+    {
+      name: "UC Riverside",
+      founded: 1954,
+      location: "Riverside, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "UC Riverside is a Minority-Serving Institution and Hispanic-Serving Institution with a strong focus on social mobility and research. Its citrus research station is legendary, and its engineering and business programs continue to grow in national stature.",
+      color: "#003DA5",
+      colorName: "Highlander Blue",
+      tags: ["Agriculture", "Engineering", "Business"],
+      img: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=600&q=80",
+      undergrads: "22,000",
+      endowment: "$0.3B",
+      acceptance: "44.9%",
+      acceptanceRaw: 44.9,
+    },
+    {
+      name: "UC Merced",
+      founded: 2005,
+      location: "Merced, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "The newest UC campus and the first research university built in the U.S. in the 21st century. UC Merced was founded to expand access to higher education in California's Central Valley, with a focus on sustainability, engineering, and the natural sciences.",
+      color: "#003262",
+      colorName: "UC Blue",
+      tags: ["Engineering", "Natural Sciences", "Sustainability"],
+      img: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+      undergrads: "9,000",
+      endowment: "$0.1B",
+      acceptance: "73.1%",
+      acceptanceRaw: 73.1,
+    },
+    {
+      name: "UCSF",
+      founded: 1864,
+      location: "San Francisco, California",
+      region: "west",
+      ivy: false,
+      uc: true,
+      desc: "The only UC campus dedicated entirely to the health sciences, UCSF is one of the world's leading medical universities. Its hospitals consistently rank among the nation's best, and its research enterprise spans medicine, pharmacy, nursing, and dentistry.",
+      color: "#052049",
+      colorName: "UCSF Navy",
+      tags: ["Medicine", "Pharmacy", "Nursing"],
+      img: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&q=80",
+      undergrads: "Grad Only",
+      endowment: "$3.3B",
+      acceptance: "N/A",
+      acceptanceRaw: 0,
+    },
   ];
 
   function buildCards(filter = 'all') {
@@ -1102,6 +1284,8 @@
       filtered = UNIVERSITIES;
     } else if (filter === 'ivy') {
       filtered = UNIVERSITIES.filter(u => u.ivy);
+    } else if (filter === 'uc') {
+      filtered = UNIVERSITIES.filter(u => u.uc);
     } else {
       filtered = UNIVERSITIES.filter(u => u.region === filter);
     }
@@ -1114,7 +1298,7 @@
           <img src="${u.img}" alt="${u.name} campus" loading="lazy" />
           <div class="uni-card-color-bar" style="background:${u.color}"></div>
           <div class="uni-card-logo" style="color:${u.color}">${u.colorName}</div>
-          ${u.ivy ? '<div class="uni-card-badge">Ivy League</div>' : ''}
+          ${u.ivy ? '<div class="uni-card-badge">Ivy League</div>' : u.uc ? '<div class="uni-card-badge">UC System</div>' : ''}
         </div>
         <div class="uni-card-body">
           <div class="uni-card-founded">Est. ${u.founded}</div>
@@ -1144,7 +1328,7 @@
       tr.innerHTML = `
         <td>
           <span class="uni-name-cell" style="border-left:3px solid ${u.color};padding-left:0.6rem">${u.name}</span>
-          ${u.ivy ? '<span class="ivy-tag">Ivy</span>' : ''}
+          ${u.ivy ? '<span class="ivy-tag">Ivy</span>' : u.uc ? '<span class="ivy-tag" style="background:rgba(0,50,98,0.1);color:#003262;border-color:rgba(0,50,98,0.3)">UC</span>' : ''}
         </td>
         <td>${u.founded}</td>
         <td>${u.location}</td>
