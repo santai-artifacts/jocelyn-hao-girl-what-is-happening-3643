@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ivy League Universities</title>
+  <title>America's Elite Universities</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -90,7 +90,7 @@
     .hero h1 em { color: var(--gold-light); font-style: italic; }
     .hero-desc {
       color: rgba(255,255,255,0.72);
-      max-width: 560px;
+      max-width: 580px;
       font-size: 1.1rem;
       line-height: 1.75;
       margin-bottom: 2.5rem;
@@ -230,6 +230,18 @@
       font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .uni-card-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: rgba(10,22,40,0.85);
+      color: var(--gold);
+      border-radius: 6px;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -395,6 +407,20 @@
       font-family: 'Playfair Display', serif;
       font-size: 0.95rem;
     }
+    .ivy-tag {
+      display: inline-block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: rgba(201,168,76,0.15);
+      color: #8a6e2a;
+      border: 1px solid rgba(201,168,76,0.4);
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      text-transform: uppercase;
+    }
     .rate-bar {
       display: flex; align-items: center; gap: 0.6rem;
     }
@@ -465,6 +491,15 @@
       border-color: var(--navy);
       color: white;
     }
+    .filter-btn.ivy-only {
+      border-color: rgba(201,168,76,0.5);
+      color: #8a6e2a;
+    }
+    .filter-btn.ivy-only:hover, .filter-btn.ivy-only.active {
+      background: #7a5c1e;
+      border-color: #7a5c1e;
+      color: white;
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -488,7 +523,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand">Ivy League</div>
+  <div class="nav-brand">Elite Universities</div>
   <ul class="nav-links">
     <li><a href="#universities">Schools</a></li>
     <li><a href="#timeline">History</a></li>
@@ -498,13 +533,13 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">Est. 1636 &ndash; 1865</div>
+  <div class="hero-eyebrow">Est. 1636 &ndash; 1912 &middot; 20 Institutions</div>
   <h1>America's Most <em>Prestigious</em> Universities</h1>
-  <p class="hero-desc">Eight institutions. Four centuries of excellence. Discover the history, culture, and legacy of the Ivy League — where ideas shape the world.</p>
+  <p class="hero-desc">From the Ivy League's eight founding members to MIT, Stanford, Duke, and beyond — twenty institutions that have shaped science, law, business, and culture across the globe.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><span class="num">8</span><span class="label">Universities</span></div>
-    <div class="hero-stat"><span class="num">375+</span><span class="label">Nobel Laureates</span></div>
-    <div class="hero-stat"><span class="num">16</span><span class="label">U.S. Presidents</span></div>
+    <div class="hero-stat"><span class="num">20</span><span class="label">Universities</span></div>
+    <div class="hero-stat"><span class="num">900+</span><span class="label">Nobel Laureates</span></div>
+    <div class="hero-stat"><span class="num">30+</span><span class="label">U.S. Presidents</span></div>
     <div class="hero-stat"><span class="num">1636</span><span class="label">Oldest Founded</span></div>
   </div>
   <div class="scroll-hint">
@@ -517,14 +552,14 @@
 <section class="about" id="about">
   <div class="about-inner">
     <div class="about-text">
-      <div class="section-label">What Is the Ivy League?</div>
-      <h2 class="section-title">More Than an Athletic Conference</h2>
-      <p class="section-desc">The Ivy League began in 1954 as a collegiate athletics conference — but the eight schools it united had been shaping American intellectual life for centuries before that.</p>
-      <p class="section-desc" style="margin-top:1rem;">Today the term evokes academic rigor, cultural influence, and a network of alumni who have led governments, sciences, and industries across the globe.</p>
+      <div class="section-label">Beyond the Ivy League</div>
+      <h2 class="section-title">A Broader Circle of Excellence</h2>
+      <p class="section-desc">The eight Ivy League schools defined American higher education for centuries — but elite universities extend well beyond that athletic conference. MIT, Stanford, Chicago, and Duke rival any Ivy in research output and global influence.</p>
+      <p class="section-desc" style="margin-top:1rem;">Together, these twenty institutions represent the full breadth of American academic ambition: land-grant universities, research powerhouses, liberal arts strongholds, and urban centers of innovation.</p>
     </div>
     <div class="about-img">
       <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=800&q=80" alt="University campus building with classical architecture" />
-      <span class="about-img-badge">Founded 1636–1865</span>
+      <span class="about-img-badge">Founded 1636–1912</span>
     </div>
   </div>
 </section>
@@ -533,17 +568,21 @@
 <section class="universities" id="universities">
   <div class="universities-inner">
     <div class="section-header">
-      <div class="section-label">The Eight Schools</div>
-      <h2 class="section-title">Every Ivy League University</h2>
-      <p class="section-desc">From the colonial-era halls of Harvard to the engineering powerhouse of Cornell — each school carries a distinct identity and legacy.</p>
+      <div class="section-label">The Schools</div>
+      <h2 class="section-title">Twenty Elite Universities</h2>
+      <p class="section-desc">Eight Ivy League members and twelve more of America's most celebrated institutions — each with a distinct identity, history, and legacy.</p>
     </div>
 
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterCards('all', this)">All Schools</button>
+      <button class="filter-btn ivy-only" onclick="filterCards('ivy', this)">Ivy League Only</button>
       <button class="filter-btn" onclick="filterCards('massachusetts', this)">Massachusetts</button>
       <button class="filter-btn" onclick="filterCards('new-york', this)">New York</button>
       <button class="filter-btn" onclick="filterCards('new-england', this)">New England</button>
       <button class="filter-btn" onclick="filterCards('mid-atlantic', this)">Mid-Atlantic</button>
+      <button class="filter-btn" onclick="filterCards('midwest', this)">Midwest</button>
+      <button class="filter-btn" onclick="filterCards('south', this)">South</button>
+      <button class="filter-btn" onclick="filterCards('west', this)">West Coast</button>
     </div>
 
     <div class="uni-grid" id="uniGrid"></div>
@@ -555,8 +594,8 @@
   <div class="timeline-inner">
     <div class="section-header">
       <div class="section-label">History</div>
-      <h2 class="section-title">Four Centuries of Founding</h2>
-      <p class="section-desc">The Ivy League schools were founded across 229 years — each reflecting the era, values, and ambitions of its time.</p>
+      <h2 class="section-title">Nearly Four Centuries of Founding</h2>
+      <p class="section-desc">America's elite universities were founded across 276 years — each reflecting the era, values, and ambitions of its time.</p>
     </div>
     <div class="timeline">
       <div class="tl-item">
@@ -564,7 +603,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Harvard University Founded</h4>
-          <p>Established by the Massachusetts Bay Colony — the first institution of higher education in the American colonies, named after its first benefactor, Reverend John Harvard.</p>
+          <p>The first institution of higher education in the American colonies, established by the Massachusetts Bay Colony and named after its first benefactor, Reverend John Harvard.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -580,7 +619,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Princeton University Founded</h4>
-          <p>Originally the College of New Jersey, Princeton was the fourth college established in colonial America and became a center of Presbyterian learning and later secular scholarship.</p>
+          <p>Originally the College of New Jersey, the fourth college established in colonial America and a center of Presbyterian learning that became a secular research powerhouse.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -588,7 +627,7 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>Columbia University Founded</h4>
-          <p>Founded as King's College by royal charter of King George II, Columbia was established in lower Manhattan and today remains New York City's oldest university.</p>
+          <p>Founded as King's College by royal charter of King George II in lower Manhattan — today the oldest university in New York City.</p>
         </div>
       </div>
       <div class="tl-item">
@@ -596,31 +635,79 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <h4>University of Pennsylvania Founded</h4>
-          <p>Founded by Benjamin Franklin with a uniquely practical mission — to prepare students for lives in business and public service, not just the clergy.</p>
+          <p>Ben Franklin's university, founded with a uniquely practical mission — to prepare students for lives in business and public service, not just the clergy.</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-year"><span>1764</span></div>
+        <div class="tl-year"><span>1764–1769</span></div>
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <h4>Brown University Founded</h4>
-          <p>Established in Warren, Rhode Island, as the College of Rhode Island. Brown was notably the first U.S. college to accept students regardless of religious affiliation.</p>
+          <h4>Brown &amp; Dartmouth Founded</h4>
+          <p>Brown (1764) broke ground as the first U.S. college to accept students regardless of religious affiliation. Dartmouth (1769) was chartered to educate Native American youth in New Hampshire.</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-year"><span>1769</span></div>
+        <div class="tl-year"><span>1789</span></div>
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <h4>Dartmouth College Founded</h4>
-          <p>Originally chartered to educate Native American youth, Dartmouth was founded by Eleazar Wheelock and is the only Ivy League institution designated as a college rather than a university.</p>
+          <h4>Georgetown University Founded</h4>
+          <p>The oldest Jesuit university in the United States, founded in Washington D.C. the same year the U.S. Constitution was ratified — making it a witness to the entire American experiment.</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-year"><span>1865</span></div>
+        <div class="tl-year"><span>1838–1842</span></div>
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <h4>Cornell University Founded</h4>
-          <p>Founded by Ezra Cornell and Andrew Dickson White on a then-radical idea: "an institution where any person can find instruction in any study" — Ithaca, New York's land-grant university.</p>
+          <h4>Duke &amp; Notre Dame Founded</h4>
+          <p>Duke (originally Trinity College, 1838) grew into a research powerhouse in North Carolina. Notre Dame (1842) was founded by French missionaries in Indiana to become America's most recognized Catholic university.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year"><span>1851</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Northwestern University Founded</h4>
+          <p>Established to serve the then-Northwest Territory, Northwestern set up its campus on the Lake Michigan shoreline in Evanston, Illinois, building one of the nation's strongest journalism and law programs.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year"><span>1853</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Washington University in St. Louis Founded</h4>
+          <p>Founded as Eliot Seminary (named after T.S. Eliot's grandfather), WashU grew into a premier research university in the heart of the country, known for medicine, law, and engineering.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year"><span>1861</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>MIT Founded &amp; Cornell Founded (1865)</h4>
+          <p>MIT (1861) was chartered in response to the industrialization of America, pioneering the research university model for STEM. Cornell (1865) followed on a land-grant vision: "any person, any study."</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year"><span>1873–1876</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Vanderbilt &amp; Johns Hopkins Founded</h4>
+          <p>Vanderbilt (1873) was endowed by Cornelius Vanderbilt to bring world-class education to the South. Johns Hopkins (1876) became the first American university modeled on the German research university — transforming graduate education nationwide.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year"><span>1885</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Stanford University Founded</h4>
+          <p>Founded by Leland and Jane Stanford in memory of their son, Stanford opened in 1891 on a vast California land grant — and went on to birth the technology ecosystem that became Silicon Valley.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year"><span>1891–1912</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h4>Caltech &amp; Rice University Founded</h4>
+          <p>Caltech (1891) was founded in Pasadena to advance science and engineering on the West Coast; it went on to manage NASA's Jet Propulsion Laboratory. Rice (1912) opened tuition-free in Houston with a mission of accessible excellence.</p>
         </div>
       </div>
     </div>
@@ -633,7 +720,7 @@
     <div class="section-header">
       <div class="section-label">At a Glance</div>
       <h2 class="section-title">Side-by-Side Comparison</h2>
-      <p class="section-desc">Key facts and figures for all eight schools, side by side.</p>
+      <p class="section-desc">Key facts and figures for all twenty schools. <span style="color:var(--gold);font-weight:600">Gold</span> tags denote Ivy League members.</p>
     </div>
     <div style="overflow-x:auto">
       <table class="compare-table">
@@ -666,16 +753,17 @@
 
 <script>
   const UNIVERSITIES = [
+    /* ── IVY LEAGUE ── */
     {
       name: "Harvard University",
       founded: 1636,
       location: "Cambridge, Massachusetts",
       region: "massachusetts",
+      ivy: true,
       desc: "The oldest university in the United States and consistently ranked among the best in the world. Home to 12 degree-granting schools and the largest academic library system on earth.",
       color: "#A51C30",
       colorName: "Crimson",
       tags: ["Law", "Medicine", "Business"],
-      tagColors: ["#fff3f3", "#A51C30", "#A51C30"],
       img: "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=600&q=80",
       undergrads: "7,200",
       endowment: "$50.9B",
@@ -687,7 +775,8 @@
       founded: 1701,
       location: "New Haven, Connecticut",
       region: "new-england",
-      desc: "Renowned for its undergraduate teaching, residential college system, and world-class drama, music, and law schools. The Yale School of Law is consistently ranked #1 in the country.",
+      ivy: true,
+      desc: "Renowned for its undergraduate teaching, residential college system, and world-class drama, music, and law schools. The Yale School of Law is consistently ranked #1 in the nation.",
       color: "#00356B",
       colorName: "Yale Blue",
       tags: ["Law", "Drama", "Medicine"],
@@ -702,6 +791,7 @@
       founded: 1746,
       location: "Princeton, New Jersey",
       region: "mid-atlantic",
+      ivy: true,
       desc: "Known for generous financial aid, a low student-to-faculty ratio, and one of the most beautiful campuses in the world. Princeton has no professional schools, focusing purely on liberal arts and sciences.",
       color: "#FF6600",
       colorName: "Princeton Orange",
@@ -717,6 +807,7 @@
       founded: 1754,
       location: "New York City, New York",
       region: "new-york",
+      ivy: true,
       desc: "Located in the heart of Manhattan, Columbia provides unparalleled access to a global city. Its Core Curriculum — a set of shared foundational courses — is one of the most celebrated in American higher education.",
       color: "#B9D9EB",
       colorName: "Columbia Blue",
@@ -732,6 +823,7 @@
       founded: 1755,
       location: "Philadelphia, Pennsylvania",
       region: "mid-atlantic",
+      ivy: true,
       desc: "Ben Franklin's university is home to the world-famous Wharton School of Business. Penn pioneered the concept of the modern research university and the dual-degree program.",
       color: "#011F5B",
       colorName: "Penn Blue",
@@ -747,6 +839,7 @@
       founded: 1764,
       location: "Providence, Rhode Island",
       region: "new-england",
+      ivy: true,
       desc: "Known for its Open Curriculum, which allows students to design their own academic program without distribution requirements. Brown fosters creativity, independent thinking, and interdisciplinary inquiry.",
       color: "#4E3629",
       colorName: "Brown",
@@ -762,7 +855,8 @@
       founded: 1769,
       location: "Hanover, New Hampshire",
       region: "new-england",
-      desc: "The smallest Ivy League school and the only one with the designation 'College.' Dartmouth's D-Plan term system and tight-knit community set it apart, as does its stunning New Hampshire campus.",
+      ivy: true,
+      desc: "The smallest Ivy and the only one designated a 'College.' Dartmouth's D-Plan term system and tight-knit community set it apart, as does its stunning New Hampshire campus.",
       color: "#00693E",
       colorName: "Dartmouth Green",
       tags: ["Business", "Engineering", "Medicine"],
@@ -777,6 +871,7 @@
       founded: 1865,
       location: "Ithaca, New York",
       region: "new-york",
+      ivy: true,
       desc: "The largest and most diverse Ivy, Cornell is a land-grant university with a staggering range of programs from agriculture to architecture. Its gorges, waterfalls, and hilltop campus are legendary.",
       color: "#B31B1B",
       colorName: "Carnelian",
@@ -787,12 +882,229 @@
       acceptance: "8.7%",
       acceptanceRaw: 8.7,
     },
+
+    /* ── BEYOND THE IVY LEAGUE ── */
+    {
+      name: "MIT",
+      founded: 1861,
+      location: "Cambridge, Massachusetts",
+      region: "massachusetts",
+      ivy: false,
+      desc: "The Massachusetts Institute of Technology is the world's premier science and engineering university. MIT's culture of hands-on research, entrepreneurship, and rigorous problem-solving has produced 97 Nobel laureates and spawned countless companies.",
+      color: "#A31F34",
+      colorName: "MIT Red",
+      tags: ["Engineering", "CS", "Physics"],
+      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+      undergrads: "4,600",
+      endowment: "$24.0B",
+      acceptance: "3.9%",
+      acceptanceRaw: 3.9,
+    },
+    {
+      name: "Stanford University",
+      founded: 1885,
+      location: "Stanford, California",
+      region: "west",
+      ivy: false,
+      desc: "Set on 8,000 acres in California's Bay Area, Stanford is the intellectual engine of Silicon Valley. Its entrepreneurial culture has spawned Google, Yahoo, Netflix, and thousands of other companies — while its graduate schools in law, business, and medicine rank among the world's best.",
+      color: "#8C1515",
+      colorName: "Cardinal",
+      tags: ["Technology", "Business", "Medicine"],
+      img: "https://images.unsplash.com/photo-1541178735493-479c1a27ed24?w=600&q=80",
+      undergrads: "7,900",
+      endowment: "$36.3B",
+      acceptance: "3.7%",
+      acceptanceRaw: 3.7,
+    },
+    {
+      name: "Caltech",
+      founded: 1891,
+      location: "Pasadena, California",
+      region: "west",
+      ivy: false,
+      desc: "With just 1,000 undergraduates, Caltech boasts the highest concentration of Nobel laureates per capita of any university on earth. It manages NASA's Jet Propulsion Laboratory and is the world leader in physics, astronomy, and engineering science.",
+      color: "#FF6C0C",
+      colorName: "Caltech Orange",
+      tags: ["Physics", "Astronomy", "Engineering"],
+      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+      undergrads: "1,000",
+      endowment: "$3.9B",
+      acceptance: "3.9%",
+      acceptanceRaw: 3.9,
+    },
+    {
+      name: "Univ. of Chicago",
+      founded: 1890,
+      location: "Chicago, Illinois",
+      region: "midwest",
+      ivy: false,
+      desc: "Home to the Chicago School of Economics — which has produced more Nobel laureates in economics than any other institution — UChicago is fiercely intellectual, deeply research-oriented, and famous for its demanding Core Curriculum.",
+      color: "#800000",
+      colorName: "Maroon",
+      tags: ["Economics", "Law", "Philosophy"],
+      img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80",
+      undergrads: "7,400",
+      endowment: "$10.2B",
+      acceptance: "5.4%",
+      acceptanceRaw: 5.4,
+    },
+    {
+      name: "Duke University",
+      founded: 1838,
+      location: "Durham, North Carolina",
+      region: "south",
+      ivy: false,
+      desc: "Known for its Gothic-architecture campus, powerhouse basketball program, and top-ranked programs in medicine, law, and public policy. Duke sits at the center of the Research Triangle, one of America's most innovative regions.",
+      color: "#003087",
+      colorName: "Duke Blue",
+      tags: ["Medicine", "Law", "Policy"],
+      img: "https://images.unsplash.com/photo-1440778303588-435521a205bc?w=600&q=80",
+      undergrads: "6,800",
+      endowment: "$11.6B",
+      acceptance: "6.3%",
+      acceptanceRaw: 6.3,
+    },
+    {
+      name: "Johns Hopkins Univ.",
+      founded: 1876,
+      location: "Baltimore, Maryland",
+      region: "mid-atlantic",
+      ivy: false,
+      desc: "America's first true research university, modeled on the German research tradition. Johns Hopkins is the undisputed leader in medical research and receives more federal R&D funding than any other university in the country.",
+      color: "#002D62",
+      colorName: "Heritage Blue",
+      tags: ["Medicine", "Public Health", "Research"],
+      img: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=600&q=80",
+      undergrads: "5,900",
+      endowment: "$11.0B",
+      acceptance: "7.4%",
+      acceptanceRaw: 7.4,
+    },
+    {
+      name: "Northwestern University",
+      founded: 1851,
+      location: "Evanston, Illinois",
+      region: "midwest",
+      ivy: false,
+      desc: "Sitting on the shores of Lake Michigan just north of Chicago, Northwestern is one of the few universities in the world with top-ranked programs in both journalism and engineering, alongside its celebrated Kellogg School of Management.",
+      color: "#4E2A84",
+      colorName: "Northwestern Purple",
+      tags: ["Journalism", "Business", "Engineering"],
+      img: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80",
+      undergrads: "8,000",
+      endowment: "$14.9B",
+      acceptance: "6.8%",
+      acceptanceRaw: 6.8,
+    },
+    {
+      name: "Notre Dame",
+      founded: 1842,
+      location: "Notre Dame, Indiana",
+      region: "midwest",
+      ivy: false,
+      desc: "America's most celebrated Catholic university, Notre Dame combines rigorous academics with a powerful sense of community, tradition, and mission. Its law school, business school, and endowment place it among the elite, alongside one of college football's most storied programs.",
+      color: "#0C2340",
+      colorName: "Notre Dame Blue",
+      tags: ["Law", "Business", "Theology"],
+      img: "https://images.unsplash.com/photo-1572861434534-b68aed8f8201?w=600&q=80",
+      undergrads: "9,000",
+      endowment: "$21.0B",
+      acceptance: "12.3%",
+      acceptanceRaw: 12.3,
+    },
+    {
+      name: "Vanderbilt University",
+      founded: 1873,
+      location: "Nashville, Tennessee",
+      region: "south",
+      ivy: false,
+      desc: "Endowed by Cornelius Vanderbilt to bring world-class education to the South, Vanderbilt today is a research powerhouse with top-ranked programs in medicine, education, and law — set in the vibrant city of Nashville.",
+      color: "#866D4B",
+      colorName: "Commodore Gold",
+      tags: ["Medicine", "Education", "Law"],
+      img: "https://images.unsplash.com/photo-1574958269340-fa927503f3dd?w=600&q=80",
+      undergrads: "7,100",
+      endowment: "$10.9B",
+      acceptance: "5.7%",
+      acceptanceRaw: 5.7,
+    },
+    {
+      name: "Georgetown University",
+      founded: 1789,
+      location: "Washington, D.C.",
+      region: "mid-atlantic",
+      ivy: false,
+      desc: "The oldest Jesuit university in America, founded the same year as the U.S. Constitution. Georgetown's proximity to the seat of government makes it the top destination for students pursuing law, foreign service, and public policy careers.",
+      color: "#063462",
+      colorName: "Georgetown Blue",
+      tags: ["Foreign Service", "Law", "Policy"],
+      img: "https://images.unsplash.com/photo-1568604407073-a8a5f6c2d7a3?w=600&q=80",
+      undergrads: "7,400",
+      endowment: "$3.1B",
+      acceptance: "12.4%",
+      acceptanceRaw: 12.4,
+    },
+    {
+      name: "Rice University",
+      founded: 1912,
+      location: "Houston, Texas",
+      region: "south",
+      ivy: false,
+      desc: "Originally opened tuition-free, Rice is a small, research-intensive university with one of the best student-to-faculty ratios in the country. Its residential college system, strong engineering programs, and proximity to the NASA Johnson Space Center define its culture.",
+      color: "#00205B",
+      colorName: "Rice Blue",
+      tags: ["Engineering", "Architecture", "Music"],
+      img: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80",
+      undergrads: "4,200",
+      endowment: "$8.9B",
+      acceptance: "7.4%",
+      acceptanceRaw: 7.4,
+    },
+    {
+      name: "WashU St. Louis",
+      founded: 1853,
+      location: "St. Louis, Missouri",
+      region: "midwest",
+      ivy: false,
+      desc: "Washington University in St. Louis has quietly climbed into the top tier of American research universities, with particularly strong programs in medicine, social work, law, and engineering — and an endowment that rivals schools twice its size.",
+      color: "#A51417",
+      colorName: "WashU Red",
+      tags: ["Medicine", "Engineering", "Law"],
+      img: "https://images.unsplash.com/photo-1565033112817-da66dd23e826?w=600&q=80",
+      undergrads: "8,600",
+      endowment: "$13.7B",
+      acceptance: "13.2%",
+      acceptanceRaw: 13.2,
+    },
+    {
+      name: "Carnegie Mellon Univ.",
+      founded: 1900,
+      location: "Pittsburgh, Pennsylvania",
+      region: "mid-atlantic",
+      ivy: false,
+      desc: "Founded by industrialist Andrew Carnegie, CMU is the global leader in computer science, artificial intelligence, and robotics. Its School of Computer Science and Tepper School of Business consistently rank at the very top of their fields.",
+      color: "#C41230",
+      colorName: "Carnegie Red",
+      tags: ["Computer Science", "AI", "Robotics"],
+      img: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&q=80",
+      undergrads: "7,100",
+      endowment: "$10.5B",
+      acceptance: "11.3%",
+      acceptanceRaw: 11.3,
+    },
   ];
 
   function buildCards(filter = 'all') {
     const grid = document.getElementById('uniGrid');
     grid.innerHTML = '';
-    const filtered = filter === 'all' ? UNIVERSITIES : UNIVERSITIES.filter(u => u.region === filter);
+    let filtered;
+    if (filter === 'all') {
+      filtered = UNIVERSITIES;
+    } else if (filter === 'ivy') {
+      filtered = UNIVERSITIES.filter(u => u.ivy);
+    } else {
+      filtered = UNIVERSITIES.filter(u => u.region === filter);
+    }
     filtered.forEach(u => {
       const card = document.createElement('div');
       card.className = 'uni-card';
@@ -802,6 +1114,7 @@
           <img src="${u.img}" alt="${u.name} campus" loading="lazy" />
           <div class="uni-card-color-bar" style="background:${u.color}"></div>
           <div class="uni-card-logo" style="color:${u.color}">${u.colorName}</div>
+          ${u.ivy ? '<div class="uni-card-badge">Ivy League</div>' : ''}
         </div>
         <div class="uni-card-body">
           <div class="uni-card-founded">Est. ${u.founded}</div>
@@ -826,10 +1139,13 @@
   function buildTable() {
     const tbody = document.getElementById('compareBody');
     UNIVERSITIES.forEach(u => {
-      const barWidth = Math.min(u.acceptanceRaw * 7, 60);
+      const barWidth = Math.min(u.acceptanceRaw * 5, 60);
       const tr = document.createElement('tr');
       tr.innerHTML = `
-        <td><span class="uni-name-cell" style="border-left:3px solid ${u.color};padding-left:0.6rem">${u.name}</span></td>
+        <td>
+          <span class="uni-name-cell" style="border-left:3px solid ${u.color};padding-left:0.6rem">${u.name}</span>
+          ${u.ivy ? '<span class="ivy-tag">Ivy</span>' : ''}
+        </td>
         <td>${u.founded}</td>
         <td>${u.location}</td>
         <td>${u.undergrads}</td>
